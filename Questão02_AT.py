@@ -1,6 +1,7 @@
 #2) Usando o Thonny, escreva um programa em Python que some todos os números pares de 1 até um dado n, inclusive.
 #O dado n deve ser obtido do usuário. No final, escreva o valor do resultado desta soma.
 
+
 def line():
     print("=" * 50)
     
@@ -16,7 +17,8 @@ def sum_n():
         if a % 2 == 0:
             s += a
     line()
-    return f"A soma dos números pares entre 1 e {num} é {s}."
+    return f"Soma dos números pares (entre 1 e {num}) = {s}"
+    line()
     
 def end():
     line()
