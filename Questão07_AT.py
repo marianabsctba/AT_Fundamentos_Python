@@ -1,3 +1,6 @@
+#Usando a biblioteca ‘pygame’, escreva um programa que desenha na tela em posição aleatória um quadrado amarelo de tamanho 50 (cinquenta), 
+#toda vez que a tecla espaço for pressionada ou o botão direito for clicado.
+
 import pygame, random
 from pygame.locals import *
 
