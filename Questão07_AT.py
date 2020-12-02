@@ -13,6 +13,7 @@ weight_s = 600
 
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Questão 07 - AT - Fund. Python - Mariana B. Sukevicz")
 running = True
 
 yellow = 255, 255, 0
@@ -37,6 +38,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:   
             square = Square()
             square.update()
