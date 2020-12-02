@@ -2,7 +2,6 @@
 #Quando o botão for clicado, ele deve chamar uma função que desenha um retângulo em uma posição aleatória na tela. 
 #Caso um retângulo apareça na mesma posição que um já existente, ambos devem ser eliminados.
 
-
 import pygame, random, math, sys
 from pygame.locals import *
 
@@ -51,23 +50,6 @@ def drawCircle(RAD, RX, RY):
     screen.blit(text, show_text)
 
 
-
-def detectCollision(rleft, rtop, width, height, center_x, center_y, RAD):
-    rright, rbottom = rleft + width / 2, rtop + height / 2
-    cleft, ctop = center_x - RAD, center_y - RAD
-    cright, cbottom = center_x + RAD, center_y + RAD
-    if rright < cleft or rleft > cright or rbottom < ctop or rtop > cbottom:
-        return False
-
-    for x in (rleft, rleft + width):
-        for y in (rtop, rtop + height):
-            if math.hypot(x - center_x, y - center_y) <= RAD:
-                return True
-
-    if rleft <= center_x <= rright and rtop <= center_y <= rbottom:
-        return True
-    return False
-
 while running:
     show = True
     screen.fill(WHITE)
@@ -76,8 +58,7 @@ while running:
         c.drawRectangle(screen)    
     for event in pygame.event.get():       
         if event.type == pygame.QUIT:
-            running = False
-        
+            running = False        
        
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
             click = pygame.mouse.get_pos()
