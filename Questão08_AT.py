@@ -8,7 +8,7 @@ BLACK = 0, 0, 0
 WHITE = 255, 255, 255
 HOVER_COLOR = 50, 70, 90
 
-SQUARE_LIST = []
+RECT_LIST = []
 
 pygame.init()
 screen = pygame.display.set_mode((W, H))
@@ -67,7 +67,7 @@ while running:
     show = True
     screen.fill(WHITE)
     
-    for c in SQUARE_LIST:
+    for c in RECT_LIST:
         c.drawRectangle(screen)    
     for event in pygame.event.get():       
         if event.type == pygame.QUIT:
@@ -80,12 +80,12 @@ while running:
             if collision_p <= RAD:
                 r = Rectangle()
                 r.drawRectangle(screen)              
-                for r_r in SQUARE_LIST:
+                for r_r in RECT_LIST:
                     if r_r.s_a.colliderect(r.s_a):
-                        SQUARE_LIST.remove(r_r)
+                        RECT_LIST.remove(r_r)
                         show = False
                 if show:
-                    SQUARE_LIST.append(r)    
+                    RECT_LIST.append(r)    
 
     circle = drawCircle(RAD, RX, RY)
     pygame.display.update()
