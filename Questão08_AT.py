@@ -14,6 +14,7 @@ screen = pygame.display.set_mode((w, h))
 pygame.font.init()
 clock = pygame.time.Clock()
 
+
 running = True
 
 CLOCK_TICK = 20
@@ -40,20 +41,18 @@ def drawCircle(rad, rx, ry):
     pygame.draw.circle(screen, HOVER_COLOR, (rx, ry), rad)
     font = pygame.font.SysFont('Times New Roman', 20)
     text = font.render("CLIQUE AQUI!", 1, WHITE)
-    show_text = (rx - (rad // 2), ry - 5)
+    show_text = (rx - (rad // 2), ry - 25)
     screen.blit(text, show_text)
     
     
 while running:
     show = True
     screen.fill(WHITE)
-    
     for q in square_list:
         q.drawSquare(screen)
     for event in pygame.event.get():       
         if event.type == pygame.QUIT:
             running = False
-        
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
             click = pygame.mouse.get_pos()
             collision_p = math.hypot(click[0] - rx, click[1] - ry)
