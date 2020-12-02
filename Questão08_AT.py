@@ -48,17 +48,21 @@ def drawCircle(rad, rx, ry):
 while running:
     show = True
     screen.fill(WHITE)
+    
     for q in square_list:
         q.drawSquare(screen)
+    
     for event in pygame.event.get():       
         if event.type == pygame.QUIT:
             running = False
+        
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
             click = pygame.mouse.get_pos()
             collision_p = math.hypot(click[0] - rx, click[1] - ry)
             if collision_p <= rad:
                 s = Square()
                 s.drawSquare(screen)
+                
                 for s_s in square_list:
                     if s_s.s_a.colliderect(s.s_a):
                         square_list.remove(s_s)
