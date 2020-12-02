@@ -3,7 +3,6 @@
 #Versão 02
 
 def order(l):
-    t = tuple(l)
     return sorted(l)    
 
 
