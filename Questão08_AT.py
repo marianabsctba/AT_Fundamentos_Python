@@ -1,3 +1,8 @@
+#8) Usando a biblioteca ‘pygame’, escreva um programa que desenha um botão (círculo) com o texto “clique” sobre ele na parte superior da tela. 
+#Quando o botão for clicado, ele deve chamar uma função que desenha um retângulo em uma posição aleatória na tela. 
+#Caso um retângulo apareça na mesma posição que um já existente, ambos devem ser eliminados.
+
+
 import pygame, random, math, sys
 from pygame.locals import *
 
