@@ -12,7 +12,7 @@ RECT_LIST = []
 
 pygame.init()
 screen = pygame.display.set_mode((W, H))
-pygame.display.set_caption("Questão 08 - Fund. Python - Mariana B. Sukevicz")
+pygame.display.set_caption("Questão 08 - AT - Fund. Python - Mariana B. Sukevicz")
 pygame.font.init()
 clock = pygame.time.Clock()
 
