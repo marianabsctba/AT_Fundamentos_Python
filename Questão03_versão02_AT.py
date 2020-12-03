@@ -1,3 +1,7 @@
+#Questão 03, versão 02. 
+
+#Isso porque "n vezes n" e "n elevado à potência n" são iguais e, portanto, também responderia ao exercício com um operador comum e com multiplicação.
+
 def exp_AB(A, B):
     return A**B
 
