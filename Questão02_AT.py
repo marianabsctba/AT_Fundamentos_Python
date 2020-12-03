@@ -3,27 +3,29 @@
 
 
 def line():
-    print("=" * 50)
-    
+    print("=" * 50)    
 
 def hello():
-    return f"==  PROGRAMA QUE SOMA NÚMEROS PARES EM INTERVALO PROPOSTO =="
+    return f"==  PROGRAMA QUE SOMA NÚMEROS PARES EM INTERVALO PROPOSTO  =="
 
-def sum_n():
+def sum_n(n):
     line()
-    num = int(input("Digite um número inteiro: "))
     s = 0
-    for a in range(2, num+1, 2):
+    for a in range(2, n+1, 2):
         if a % 2 == 0:
             s += a
-    line()
-    return f"Soma dos números pares (entre 1 e {num}) = {s}"
-    line()
-    
+    return s       
+
 def end():
     line()
     return "FIM!"
-    
+
+
+num = int(input("Digite um número inteiro: "))
+
+sum_even = sum_n(num)
+
 print(hello())
-print(sum_n())
+print(f"A soma até o número {num}) é: {sum_even}")
 print(end())
+
