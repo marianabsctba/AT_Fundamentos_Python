@@ -2,11 +2,11 @@
 # Versão 01
 
 def order(t):
-    return sorted(t)
+    return tuple(sorted(t))
 
   
 t = (10, 15, 1)
 
 print(f"Essa é a sua tupla: {t}")
 
-print(f"Essa é a sua tupla ordenada: {tuple(order(t))}")
+print(f"Essa é a sua tupla ordenada: {order(t)}")
