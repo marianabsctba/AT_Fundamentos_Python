@@ -15,7 +15,7 @@ def show_p(tupl):
     return tuple(n for n in tupl if n % 2 == 0)
 
 def show_index(tupl):
-    return tuple(n for i, n in enumerate(tupl) if i % 2 == 1)
+    return tuple(n for i, n in enumerate(tupl) if i % 2 == 0)
 
 
 t = (1, 2, 44, 67, 89, -1, 99, 118, 125, 149, 3, 7)
