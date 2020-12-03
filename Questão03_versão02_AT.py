@@ -1,16 +1,16 @@
 #Questão 03, versão 02. 
 
-def potencia(A, B):
-    sums = 1
-    t = 0
-    for n in range(B):
-        sums *= A
-        t += 1
-    return sums
+def potencia(a, b):
+    if b == 0:
+        return 1
+    else:
+        return a*potencia(a, b-1)
 
 A = int(input("Base: "))
 B = int(input("Expoente: "))
 
-print(f"Resultado: {potencia(A, B)}")
+p = potencia(A, B)
+
+print(f"Resultado: {p}")
 
 
