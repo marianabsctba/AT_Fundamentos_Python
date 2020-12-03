@@ -6,7 +6,7 @@ def mult_a_b(a, b):
     sums = sum(b for _ in range(abs(a)))
     return sums 
 
-def pot(a, b):
+def power(a, b):
     sums = 1
     for _ in range(b):
         sums = mult_a_b(sums, a)
