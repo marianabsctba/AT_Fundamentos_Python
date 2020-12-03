@@ -19,6 +19,6 @@ t = (1, 2, 44, 67, 89, -1, 99, 118, 125, 149, 3, 7)
 l_i = show_i(t)
 tup_p = show_p(t)
 
-print(f"Tupla digitada: {read_t(t)}")
+print(f"Tupla: {read_t(t)}")
 print(f"Lista de ímpares: {l_i}")
 print(f"Tupla de pares: {tup_p}")
