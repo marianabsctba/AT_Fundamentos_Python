@@ -2,16 +2,16 @@
 #(n1, n2, n3) e os imprima em ordem crescente.
 #Versão 02, usando input do usuário
 
-def order(l):
-    return sorted(l)    
+def order(t):
+    return tuple(t), tuple(sorted(t))
 
 
-l = []
+t = []
 n = int(input("Digite o número de elementos na tupla: "))
 for e in range(1, n+1):
     user_l = int(input(f"Digite o {e}° número inteiro: "))
-    l.append(user_l)
+    t.append(user_l)
 
 
-print(f"Essa é a sua tupla digitada: {tuple(l)}")
-print(f"Essa é a sua tupla ordenada: {tuple(order(l))}")
+print(f"Essa é a sua tupla digitada: {order(t)[0]}")
+print(f"Essa é a sua tupla ordenada: {order(t)[1]}")
