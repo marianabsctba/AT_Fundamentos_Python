@@ -6,7 +6,6 @@ from pygame.locals import *
 
 SQUARE_L = []
 
-
 WIDTH_S = 800
 HEIGHT_S = 600
 
@@ -29,7 +28,7 @@ class Square:
         self.square = pygame.Rect(self.x, self.y, self.height, self.width)
 
     def draw(self): 
-        pygame.draw.rect(SCREEN, YELLOW, self.square)
+        pygame.draw.rect(SCREEN, YELLOW, self.square, 5)
 
 square = Square()
 d_square = False
