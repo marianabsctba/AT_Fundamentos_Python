@@ -4,8 +4,10 @@
 #e uma nova tupla contendo somente os elementos nas posições pares.
  
  
-def read_t(t):
-    return tuple(t)
+ # alteração do exercício para trabalhar com listas e tuplas
+ 
+def read_t(tupl):
+    return tuple(tupl)
 
 def show_i(tupl):
     return [n for n in tupl if n % 2 != 0]
