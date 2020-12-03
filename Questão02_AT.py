@@ -22,7 +22,7 @@ def sum_n():
     
 def end():
     line()
-    return f"FIM!"
+    return "FIM!"
     
 print(hello())
 print(sum_n())
