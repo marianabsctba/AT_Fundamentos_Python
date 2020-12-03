@@ -3,6 +3,8 @@
 #retorne uma lista contendo somente os números ímpares
 #e uma nova tupla contendo somente os elementos nas posições pares.
 
+#acrescentei tupla com os números pares também, além do index
+
 def read_t(tupl):
     return tupl
 
