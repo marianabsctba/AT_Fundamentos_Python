@@ -1,12 +1,16 @@
 #Questão 03, versão 02. 
 
-#Isso porque "n vezes n" e "n elevado à potência n" são iguais e, portanto, também responderia ao exercício com um operador comum e com multiplicação.
+def potencia(A, B):
+    sums = 1
+    t = 0
+    for n in range(B):
+        sums *= A
+        t += 1
+    return sums
 
-def exp_AB(A, B):
-    return A**B
+A = int(input("Base: "))
+B = int(input("Expoente: "))
 
-A = int(input("Digite a base: "))
-B = int(input("Digite o expoente: "))
+print(f"Resultado: {potencia(A, B)}")
 
-print(f"Base: {A}\nExpoente: {B}")
-print(f"Resultado: {exp_AB(A, B)}")
+
