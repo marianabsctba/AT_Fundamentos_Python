@@ -9,7 +9,7 @@ def potencia(A, B):
         B -= 1
     return sums
    
-A = int(input("Digite a base: "))
-B = int(input("Digite o expoente: "))
+A = int(input("Base: "))
+B = int(input("Expoente: "))
     
 print(potencia(A, B))
