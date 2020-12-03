@@ -1,4 +1,4 @@
-#Questão 03, versão 02. 
+#Questão 03, versão 02 c/ recursiva
 
 def potencia(a, b):
     if b == 0:
