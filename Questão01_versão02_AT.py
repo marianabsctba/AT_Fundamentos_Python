@@ -1,6 +1,7 @@
 #1) Usando o Thonny, escreva um programa em Python que leia uma tupla contendo 3 números inteiros,
 #(n1, n2, n3) e os imprima em ordem crescente.
-#Versão 02, usando input do usuário
+
+#Versão 02, usando input do usuário etrabalhando com tuplas e listas
 
 def order(t):
     return tuple(t), tuple(sorted(t))
