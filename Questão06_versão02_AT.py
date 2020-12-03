@@ -4,7 +4,7 @@
 #e uma nova tupla contendo somente os elementos nas posições pares.
  
  
- # alteração do exercício para trabalhar com listas e tuplas
+ # alteração do exercício para trabalhar com listas e tuplas e input do usuário
  
 def read_t(tupl):
     return tuple(tupl)
