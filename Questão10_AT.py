@@ -42,6 +42,7 @@ dt_filtrado_esportes = dt_filtra_ano[(dt_filtra_ano['Sport'] == 'Curling') |
 print('**** Questão A ********')
 dt_curling = dt_filtrado_esportes[(dt_filtrado_esportes['Sport'] == 'Curling') &
              (dt_filtrado_esportes['Medal'] == 'Gold')]
+
 dt_curling.groupby(['NOC'])['NOC'].count()
 
 print('**** Curling ********')
@@ -78,6 +79,6 @@ print('******* Questão B **************')
 print('---- RELATÓRIO DA QUANTIDADE DE MEDALHAS POR PAÍS, ESPORTE, ANO, CIDADE E SEXO ----')
 q_b= dt_frame.groupby(['NOC', 'Sport', 'Year','City','Event gender'])[['Medal']].count()
 
-print(exer_b)
+print(q_b)
 q_b.to_html('report.html')
 print('**********************\n')
