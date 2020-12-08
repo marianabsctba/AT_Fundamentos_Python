@@ -2,7 +2,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
- 
+
+#versão que organiza o contepudo apresentado.
  
 def data(x):
     data_lines = x.text.replace('\n','//')[2:-2].split('//')
