@@ -53,7 +53,7 @@ dt_skating = dt_filtrado_esportes[(dt_filtrado_esportes['Sport'] == 'Skating') &
             (dt_filtrado_esportes['Medal'] == 'Gold')]
 
 print('**** Skating ********')
-print('--- MAIOR MEDALISTA DE OURO ---')
+print('--- MAIOR MEDALISTA DE OURO --- (NENHUM RESULTADO ENCONTRADO)')
 print(dt_skating.groupby(['NOC'])['NOC'].count())
 print('***************\n')
 
