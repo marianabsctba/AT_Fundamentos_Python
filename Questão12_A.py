@@ -1,5 +1,7 @@
 #12-A IMPRIMA O CONTEÚDO REFERENTE APENAS À TABELA APRESENTADA NA PÁGINA INDICADA.
 
+#versão simples, mostrando apenas os dados da tabela.
+
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
