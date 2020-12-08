@@ -1,7 +1,6 @@
 #13) Obtenha, usando requests ou urllib, o conteúdo sobre as PyLadies no link http://brasil.pyladies.com/about e:
-A) Conte todas as palavras no corpo da página, e indique quais palavras apareceram apenas uma vez.
-B) Conte quantas vezes apareceu a palavra ladies no conteúdo da página.
-
+#A) Conte todas as palavras no corpo da página, e indique quais palavras apareceram apenas uma vez.
+#B) Conte quantas vezes apareceu a palavra ladies no conteúdo da página.
 
 import re
 import requests
@@ -24,17 +23,22 @@ place = re.sub('[^a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖ
 
 wordlist = place.split()
 wordfreq = {}
-
 for w in wordlist:
     wordfreq[w] = wordlist.count(w)
 
-
+def prints():
     distintas = len(wordfreq)
-total = sum([ wordfreq[k] for k in wordfreq ])
-print('Quantidade de ladies: {}'.format(wordfreq['LADIES']))
-print(f'Quantidade de palavras distintas: {distintas}')
-print(f'Total de palavras: {total}')
-print('Palavras que apareceram somente uma vez')
-for k in wordfreq:
-  if wordfreq[k]==1:
-    print(f'{k}')
+    total = sum([wordfreq[k] for k in wordfreq ])
+    
+    print('Quantidade de ladies: {}'.format(wordfreq['LADIES']))
+    print(f'Quantidade de palavras distintas: {distintas}')
+    print(f'Total de palavras: {total}')
+    
+    print('Palavras que apareceram somente uma vez:')
+    
+    for k in wordfreq:
+      if wordfreq[k]==1:
+        print(f'{k}')
+
+prints()
+
