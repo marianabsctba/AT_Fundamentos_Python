@@ -21,7 +21,7 @@ def state_user(state):
     elif state == 'MS':
         return place[3].text
     else:
-        return f"Sigla digitada não existe."
+        return f"Sigla digitada não pertence ao Centro-Oeste."
     line()
         
 
