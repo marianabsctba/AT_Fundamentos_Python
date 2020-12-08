@@ -80,5 +80,5 @@ print('---- RELATÓRIO DA QUANTIDADE DE MEDALHAS POR PAÍS, ESPORTE, ANO, CIDADE
 q_b= dt_frame.groupby(['NOC', 'Sport', 'Year','City','Event gender'])[['Medal']].count()
 
 print(q_b)
-q_b.to_html('report.html')
+q_b.to_html('report.html') #Caso queira imprimir o relatório no navegador
 print('**********************\n')
