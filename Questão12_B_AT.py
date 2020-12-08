@@ -9,20 +9,18 @@ soup = BeautifulSoup(file, "lxml")
 place = soup.find_all('div', attrs={'class': 'linha'})
 
 def line():
-    print("==" * 30)
+  print("==" * 30)
 
 def state_user(state):
-    if state == 'DF':
-        return place[0].text
-    elif state == 'GO':
-        return place[1].text
-    elif state == 'MT':
-        return place[2].text
-    elif state == 'MS':
-        return place[3].text
-    else:
-        return f"Sigla digitada não pertence ao Centro-Oeste."
-    line()
+  states = {
+      'DF' : place[0].text,
+      'GO' : place[1].text,
+      'MT' : place[2].text,
+      'MS' : place[3].text,
+  }
+  if state in states:
+    return states[state]
+  return f"Sigla digitada não pertence ao Centro-Oeste."
         
 
 
