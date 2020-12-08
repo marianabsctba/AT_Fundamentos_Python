@@ -28,11 +28,8 @@ wordfreq = {}
 for w in wordlist:
     wordfreq[w] = wordlist.count(w)
 
-#print('Word Count')
-#for w, ct in wordfreq.items():
-#    print('{} {}'.format(w, ct))
 
-distintas = len(wordfreq)
+    distintas = len(wordfreq)
 total = sum([ wordfreq[k] for k in wordfreq ])
 print('Quantidade de ladies: {}'.format(wordfreq['LADIES']))
 print(f'Quantidade de palavras distintas: {distintas}')
