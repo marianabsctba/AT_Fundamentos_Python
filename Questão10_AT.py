@@ -8,7 +8,6 @@
 #HÓQUEI SOBRE O GELO (ICE HOCKEY)
 #PARA CADA ESPORTE, CONSIDERE TODAS AS MODALIDADES, TANTO NO MASCULINO QUANTO NO FEMININO. SUA RESPOSTA DEVE IMPRIMIR UM RELATÓRIO MOSTRANDO O TOTAL DE MEDALHAS DE CADA UM DOS PAÍSES E EM QUE ESPORTE, ANO, CIDADE E GÊNERO (MASCULINO OU FEMININO) CADA MEDALHA FOI OBTIDA.
 
-
 import requests, csv, pandas as pd
 
 def download_file(url):
@@ -30,7 +29,9 @@ dt_frame = pd.read_csv(file, sep=',')
 dt_paises = dt_frame[(dt_frame['NOC'] == 'SWE') | 
                      (dt_frame['NOC'] == 'DEN') | 
                      (dt_frame['NOC'] == 'NOR')]
+
 dt_filtra_ano = dt_paises[(dt_paises['Year'] > 2000)]
+
 dt_filtrado_esportes = dt_filtra_ano[(dt_filtra_ano['Sport'] == 'Curling') |
                        (dt_filtra_ano['Sport'] == 'Skating') |
                        (dt_filtra_ano['Sport'] == 'Skiing') | 
